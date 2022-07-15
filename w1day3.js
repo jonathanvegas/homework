@@ -14,3 +14,14 @@
 // }
 
 //2.
+const testArray = [ true, false, false, true, false, false, false, true, true, true, false ]
+let sum = 0;
+function trueValues(testArray){
+    for (const value of testArray){
+        if (value == true){
+            sum++
+        }
+    } 
+    return sum
+}
+console.log(trueValues(testArray))
