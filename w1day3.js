@@ -61,7 +61,7 @@ console.log("Total Score: " + totalScore(num2Points,num3Points))
 
 // Extra for experts:
 // 5. Create a function that takes an array of numbers & returns both min and max in that order. (use a loop)
-let arrayNum = [6,2,3,1,-3,9,4,-2,8,5,10,-1,7,-5]
+let arrayNum = [6,2,3,1,-3,9,4,-2,8,5,-5,10,-1,7,15,0,11]
 //let arrayNum = ['FA','J','B','A','AV','N', 'AA','BI', 'BA', 'Z', 'FX', 'ZZ']
 function minmaxValue(arrayNum){
     for (let i = 0; i < arrayNum.length; i++) {
@@ -77,3 +77,21 @@ function minmaxValue(arrayNum){
     console.log(arrayNum)
 }
 minmaxValue(arrayNum)
+
+//OTHER SOLUTION
+let arrayNum2 = [6,2,3,1,-3,9,4,-2,8,5,-5,10,-1,7,15,0,11]
+function minmaxValue2(arrayNum2){
+    let valMin = arrayNum2[0]
+    let valMax = arrayNum2[0]
+    for (let i = 1; i < arrayNum2.length; i++) {
+        if (arrayNum2[i] < valMin) {
+            valMin = arrayNum2[i]
+        }
+        if (arrayNum2[i] > valMax) {
+            valMax = arrayNum2[i]
+        }
+    }
+    console.log(`Min value: ${valMin}`)
+    console.log(`Max value: ${valMax}`)
+}
+minmaxValue2(arrayNum2)
